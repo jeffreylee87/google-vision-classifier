@@ -114,7 +114,7 @@ function snapshot() {
 
 
 ////// click button for history check it out
-$(".dbHistory").on("click", function(event) {
+$(".dbHistory").one("click", function(event) {
     event.preventDefault();
     $.get("/api/logo", function(data) {
       if (data.length !== 0) {
