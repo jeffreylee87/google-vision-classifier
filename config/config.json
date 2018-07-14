@@ -9,7 +9,7 @@
   },
   "test": {
     "username": "root",
-    "password": "Iverson87",
+    "password": "root",
     "database": "logoDB",
     "host": "127.0.0.1",
     "dialect": "mysql",
