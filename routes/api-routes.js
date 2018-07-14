@@ -5,22 +5,15 @@ let myResult = {
     arr2: [],
     arr3: []
 };
-require("dotenv").config()
-const vision = require('@google-cloud/vision');
-const client = new vision.ImageAnnotatorClient({   //keyFilename: "./VidWall-e4a178d8b757.json"
-    type: process.env.type,
-    project_id: process.env.project_id.process,
-    private_key_id: process.env.private_key_id,
-    private_key: private_key.process.env,
-    client_email: process.env.client_email,
-    client_id: process.env.client_id,
-    auth_uri: process.env.auth_uri,
-    token_uri: process.env.token_uri,
-    auth_provider_x509_cert_url: process.env.auth_provider_x509_cert_url,
-    client_x509_cert_url: process.env.client_x509_cert_url
-});
 
-let wiki;
+const vision = require('@google-cloud/vision');
+const client = new vision.ImageAnnotatorClient({
+    project_id: "logo-detection-app",
+    credentials: {
+        private_key: process.env.private_key.replace(/\\n/g, '\n'),
+        client_email: process.env.client_email
+    }
+});
 const axios = require("axios");
 const db = require("../models");
 
@@ -38,7 +31,6 @@ module.exports = (app) => {
             myResult.arr2 = await myVision2(fileName);
             myResult.arr3 = await myVision4(fileName);
             create(myResult.arr1[0], myResult.arr1[1], myResult.arr2[0], myResult.arr3[0], fileName)
-            console.log("myResult: " + JSON.stringify(myResult));
             res.json(myResult)
         }
         
@@ -68,20 +60,6 @@ module.exports = (app) => {
         db.Classify.findAll({}).then(function (results) {
             res.json(results);
         })
-    });
-
-    app.get('/display', function (req, res) {
-
-        require('fs').readFile('img.png', function (err, data) {
-            if (err) throw err; // Fail if the file can't be read.
-            else {
-                const data64 = Buffer.from(data).toString('base64');
-                res.writeHead(200, {
-                    'Content-Type': 'image/png'
-                });
-                res.end(data64); // Send the file data to the browser.
-            }
-        });
     });
 }
 

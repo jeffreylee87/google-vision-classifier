@@ -13,20 +13,20 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
       },
 
-      labels: {
-        type: DataTypes.TEXT, 
-        allowNull: false,
-      },
+      // labels: {
+      //   type: DataTypes.TEXT, 
+      //   allowNull: false,
+      // },
 
-      text: {
-        type: DataTypes.TEXT, 
-        allowNull: true,
-      },
+      // text: {
+      //   type: DataTypes.TEXT, 
+      //   allowNull: true,
+      // },
 
-      file: {
-        type: DataTypes.STRING(120), 
-        allowNull: false,
-      }
+      // file: {
+      //   type: DataTypes.STRING(120), 
+      //   allowNull: false,
+      // }
       // image: {
       //   type: DataTypes.BLOB("long")//,
       //   // allowNull: false,

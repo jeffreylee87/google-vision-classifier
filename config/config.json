@@ -9,8 +9,8 @@
   },
   "test": {
     "username": "root",
-    "password": "root",
-    "database": "database_test",
+    "password": "Iverson87",
+    "database": "logoDB",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false
