@@ -45,7 +45,13 @@ body {
 .bottom {
   height: 40%;
   color: white;
-  font-family: 'Expletus Sans', cursive;
+  /* font-family: 'Expletus Sans', cursive; */
+  font-family: 'Orbitron', sans-serif;
+
+}
+
+.modal {
+  font-family: 'Orbitron', sans-serif;
 
 }
 
