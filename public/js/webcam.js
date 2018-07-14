@@ -111,7 +111,10 @@ function snapshot() {
     });       
 }
       
-
+//shows modal instructions page on page load.
+$(window).on('load',function(){
+    $('.modal').modal('show');
+});
 
 ////// click button for history check it out
 $(".dbHistory").one("click", function(event) {

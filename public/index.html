@@ -58,7 +58,6 @@
 <div class="row">
 <button type="button" class="dbHistory btn btn-secondary btn-lg btn-block">History</button>
 <div class="history">
-
 </div>
 </div>
 </div>
@@ -66,7 +65,29 @@
   
   
     
-
+<div class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Instructions</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>1. Press the <i class="fas fa-power-off"></i> to start camera</p>
+          <p>2. Grab an item you want the image detector to classify and position it in front of the camera.</p>
+          <p>3. Press the red <i class="fas fa-camera"></i> button to take photo</p>
+          <p>4. Wait a second.....then voila! Image Classified!!!</p>
+          <p>5. Hit "History" button to check previous entries</p>
+          <p>6. Hit the <i class="fas fa-times-circle"></i> to close the cam</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 <script src='./js/webcam.js'></script>   
 </body>
 </html>
