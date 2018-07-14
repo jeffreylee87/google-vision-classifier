@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "fztz71fkacc1dcet",
-    "password": "puo6vg7rc082qyrv",
-    "database": "j6lq6nqkrvn7oooe",
-    "host": "o677vxfi8ok6exrd.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "username": "root",
+    "password": "",
+    "database": "logoDB",
+    "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false
   },
@@ -16,11 +16,7 @@
     "operatorsAliases": false
   },
   "production": {
-    "username": "root",
-    "password": "root",
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql",
-    "operatorsAliases": false
+    "use_env_variable": "JAWSDB_URL",
+    "dialect": "mysql"
   }
 }
